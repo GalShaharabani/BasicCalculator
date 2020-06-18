@@ -3,67 +3,53 @@ from math import *
 
 # CALCULATIONS
 def add(number1, number2):
-    n1 = number1
-    n2 = number2
     print("Result: ")
-    print(float(n1) + float(n2))
-    number1 = float(n1) + float(n2)
-    return number1
+    print(float(number1) + float(number2))
+    return float(number1) + float(number2)
+
 
 
 def subtract(number1, number2):
-    n1 = number1
-    n2 = number2
     print("Result: ")
-    print(float(n1) - float(n2))
-    number1 = float(n1) - float(n2)
-    return number1
+    print(float(number1) - float(number2))
+    return float(number1) - float(number2)
+
 
 
 def multiply(number1, number2):
-    n1 = number1
-    n2 = number2
     print("Result: ")
-    print(float(n1) * float(n2))
-    number1 = float(n1) * float(n2)
-    return number1
+    print(float(number1) * float(number2))
+    return float(number1) * float(number2)
+
 
 
 def divide(number1, number2):
-    n1 = number1
-    n2 = number2
     print("Result: ")
-    print(float(n1) / float(n2))
-    number1 = float(n1) / float(n2)
-    return number1
+    print(float(number1) / float(number2))
+    return float(number1) / float(number2)
+
 
 
 def square_root(number1):
-    n1 = number1
     print("Result: ")
-    print(float(sqrt(n1)))
-    number1 = sqrt(n1)
-    return number1
+    print(float(sqrt(number1)))
+    return sqrt(number1)
 
 
 def power(number1, number2):
-    n1 = number1
-    n2 = number2
     print("Result: ")
-    print(float(n1) ** float(n2))
-    number1 = float(n1) ** float(n2)
-    return number1
+    print(float(number1) ** float(number2))
+    return float(number1) ** float(number2)
+
 
 
 def clear(number1, number2):
     number1 = 0
     number2 = 0
-    n1 = number1
-    n2 = number2
-    result = n1 + n2
+    result = number1 + number2
     print(result)
-    n1 = result
-    return n1
+    return result
+
 
 
 # def redo(number2):
@@ -77,7 +63,7 @@ print("Welcome!")
 num1 = float(input("enter first number: "))
 num2 = 0
 action = input("action: ")
-valid_action=False
+valid_action=True
 
 if action == actions[4]:
     num2 =0
@@ -89,7 +75,7 @@ while len(action) != 1:
     if len(action) == 1:
         valid_action=True
 
-if valid_action:
+if valid_action and action != actions[4]:
     num2 = float(input("enter second number: "))
 
 
@@ -102,6 +88,13 @@ def calculate(number1, op, number2):
         print(str(act) + " is not an action")
         act = input("enter a valid action: ")
         n2 = float(input("enter another number: "))
+    # for act in actions:
+    #     i=0
+    #     if act != actions[i]:
+    #         print(str(act) + " is not an action")
+    #         act = input("enter a valid action: ")
+    #         n2 = float(input("enter another number: "))
+    #     i+=1
 
     while True:
 
