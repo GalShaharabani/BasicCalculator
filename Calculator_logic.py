@@ -7,9 +7,16 @@ num2 = 0
 action = input("action: ")
 valid_action = True
 actions = Calculator.load_actions(Calculator, Calculator.actions)
+shtdwn="e"
 if action == actions[4] or action == actions[7]:
     num2 =0
-
+if action == shtdwn or action == shtdwn.upper():
+    dot = ['.', '..', '...']
+    for i in range(3):
+        print("Shutting down" + dot[i])
+        time.sleep(1)
+    print("Goodbye!")
+    sys.exit(0)
 while len(action) != 1 or action not in actions or len(action) == 0:
     valid_action = False
     print("invalid action")
@@ -100,11 +107,12 @@ def calculate(number1, act, number2, actions):
 
             if act != actions[7]:
                 act = input("another action: ")
-                if act == "e":
+                if act == shtdwn or action == shtdwn.upper():
                     dot = ['.', '..', '...']
                     for i in range(3):
                         print("Shutting down"+dot[i])
                         time.sleep(1)
+                    print("Goodbye!")
                     sys.exit(0)
                 elif len(act) != 1 or act not in actions or len(act) == 0:
                     print("invalid action")
